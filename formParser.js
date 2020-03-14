@@ -1,5 +1,15 @@
+/** Class for Parsing HTML5 forms with ease. */
+
 export default class formParser {
 
+    /**
+     * @author Garrick Crouch
+     * @description On success will clear form and reset formData object. On error will log response.
+     * @param {string} formSelector - The string identifier for the class applied to all forms.
+     * @summary Instantiate class, call init.
+     */
+
+    formData = {};
     formSelector = '';
 
     constructor(formSelector) {
@@ -35,7 +45,7 @@ export default class formParser {
                             e.target.reset();
                             this.formData = {};
                         } else {
-                            console.log(data.respose);
+                            console.log(data.response);
                         }
                     });
             });
